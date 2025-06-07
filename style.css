@@ -1,0 +1,280 @@
+/* https://gwfh.mranftl.com/fonts */
+
+/* OUFIT */
+/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+@font-face {
+  font-display: swap; 
+  font-family: 'Oufit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Oufit';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype'); 
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Oufit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype'); 
+}
+/* YOUNG SERIF */
+@font-face {
+  font-display: swap;
+  font-family: 'YoungSerif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype'); 
+}
+:root {
+    /* COLORS */
+    --rose-800: #7a284e;
+    --rose-50: #fff7fb;
+    --stone-900: #312e2c;
+    --stone-600: #5f564d;
+    --stone-150: #e3ddd7;
+    --stone-100: #f3e5d7;
+    --brown-800: #854632;
+    --white: #ffffff;
+    /* SPACING */
+    --space-1600: 128px;
+    --space-600: 48px;
+    --space-500: 40px;
+    --space-400: 32px;
+    --space-300: 24px;
+    --space-200: 16px;
+    --space-150: 12px;
+    --space-100: 8px;
+    /* FONTS */
+    --text-1-size: 2.5rem; /* 40px */
+    --text-1-mobile-size: 2.25rem; /* 36px */
+    --text-1-line-height: 100%;
+    --text-1-font-family: 'YoungSerif';
+    --text-1-font-weight: 400;
+
+    --text-2-size: 1.75rem; /* 28px */
+    --text-2-line-height: 100%;
+    --text-2-font-family: 'YoungSerif';
+    --text-2-font-weight: 400;
+
+    --text-3-size: 1.25rem; /* 20px */
+    --text-3-line-height: 100%;
+    --text-3-font-family: 'Oufit';
+    --text-3-font-weight: 600;
+
+    --text-4-size: 1rem; /* 16px */
+    --text-4-line-height: 150%;
+    --text-4-font-family: 'Oufit';
+    --text-4-font-weight-regular: 400;
+    --text-4-font-weight-bold: 700;
+
+    --text-all-letter-spacing: 0px;   
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Oufit', sans-serif, Arial, Helvetica;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  background-color: var(--stone-100);
+}
+
+h1,
+h2,
+h3,
+p,
+img,
+ul,
+hr,
+ol,
+ul,
+tr,
+td,
+th
+{
+  margin: 0;
+  padding: 0;
+} 
+
+.card{
+    background-color: var(--white);
+    width: 736px;
+    padding: var(--space-500);
+    margin: var(--space-1600) 0 var(--space-1600) 0;
+    border-radius: 24px;
+}
+.card img{
+    height: 300px;
+    max-width: 100%;
+    display: block;
+    border-radius: 12px;
+    margin: 0 0 var(--space-500) 0;
+}
+.card .title{
+   font-size: var(--text-1-size);   
+   font-family: var(--text-1-font-family);
+   font-weight: var(--text-1-font-weight);
+   line-height: var(--text-1-line-height);
+   letter-spacing: var(--text-all-letter-spacing);
+   color: var(--stone-900);  
+   margin: 0 0 var(--space-300) 0; 
+}
+.card h2{
+  font-family: var(--text-2-font-family);
+  font-size: var(--text-2-size);
+  font-weight: var(--text-2-font-weight);
+  line-height: var(--text-2-line-height);
+  letter-spacing: var(--text-all-letter-spacing);
+  color: var(--brown-800);
+  margin: 0 0 var(--space-300) 0;
+}
+.card p,
+.card li,
+.card td{
+  font-size: var(--text-4-size);
+  line-height: var(--text-4-line-height);
+  font-family: var(--text-4-font-family);
+  font-weight: var(--text-4-font-weight-regular);
+  letter-spacing: var(--text-all-letter-spacing);  
+  color: var(--stone-600)
+}
+.card .prep-card{
+  background-color: var(--rose-50);
+  padding: var(--space-300);
+  border-radius: 12px;
+  margin: var(--space-400) 0;
+}
+.card .prep-card h2{
+  font-family: var(--text-3-font-family);
+  font-size: var(--text-3-size);
+  font-weight: var(--text-3-font-weight);
+  line-height: var(--text-3-line-height);
+  letter-spacing: var(--text-all-letter-spacing);
+  color: var(--rose-800);
+  margin-bottom: var(--space-200);
+}
+.card .prep-card ul,
+.card ul,
+.card ol {
+  padding-left: var(--space-300);
+}
+.card .prep-card li,
+.card li
+{
+  padding-left: var(--space-200);
+}
+.card .prep-card ul li::marker{
+  color: var(--rose-800);
+}
+.card .border-top{
+  border-top: 1px solid var(--stone-150);
+  padding-top: var(--space-400);
+}
+
+.card li:not(:last-child){
+  margin-bottom: var(--space-100);
+}
+.card li:last-child:not(.prep-card li) {
+  margin-bottom: var(--space-400);
+}
+.card ol li::marker{
+  font-weight: 700;
+  color: var(--brown-800);
+}
+.card ul li::marker{
+  font-weight: 400;
+  color: var(--brown-800);
+}
+
+.card .table-descr{
+  margin-bottom: var(--space-300);
+}
+
+.card table td{
+  padding-top: var(--space-150);
+  padding-bottom: calc(var(--space-150) - 1px);
+}
+.card table tr:first-child td{
+  padding-top: 0;
+}
+.card table tr:last-child td{
+  padding-bottom: 0;
+}
+.card table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.card table td, tr::not(:last-child){
+   border-bottom: 1px solid var(--stone-150);
+}
+.card table tbody tr td:nth-child(2) {
+  font-weight: var(--text-4-font-weight-bold);
+  color: var(--brown-800);
+  padding-left: var(--space-200);
+}
+.card table tbody tr td:nth-child(1) {
+  padding-left: var(--space-400);
+  width: 320px;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .card {
+    width: 616px;
+  }
+  .card table tbody tr td:nth-child(1){
+    width: 260px;
+  }
+  .card li.manual{
+    width: 513px;
+  }
+} 
+
+/* MOBILE */
+@media (max-width: 375px) {
+  .card {
+    width: 375px;
+    margin: 0;
+    padding: 0;;
+    border-radius: 0;
+  }
+  .card li.manual{
+    width: auto;
+  }
+  .card table tbody tr td:nth-child(1){
+  width: 147.5px;
+  }
+  .card img{
+   height: 171px;
+   width: 100%;
+   border-radius: 0;
+  }
+  .card .title{
+    font-size: var(--text-1-mobile-size);
+  }
+  .mobile{
+    margin-left: var(--space-400);
+    margin-right: var(--space-400);
+    padding-bottom: var(--space-500);
+  }
+}
+
+
+
+
+
+
+
